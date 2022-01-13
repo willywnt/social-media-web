@@ -6,6 +6,7 @@ import axios from 'axios';
 
 const DetailUser = () => {
   const { userId } = useParams();
+  //   const history = createBrowserHistory();
   const [user, setUser] = useState({});
   const [albums, setAlbums] = useState([]);
   const [photos, setPhotos] = useState([]);
@@ -171,10 +172,23 @@ const DetailUser = () => {
           <Col sm={3}>
             <Nav variant="pills" className="flex-column">
               <Nav.Item>
-                <Nav.Link eventKey="first">Profile</Nav.Link>
+                <Nav.Link style={{ cursor: 'pointer' }} eventKey="first">
+                  Profile
+                </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="second">Albums</Nav.Link>
+                <Nav.Link style={{ cursor: 'pointer' }} eventKey="second">
+                  Albums
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item className="d-grid gap-2">
+                <Button
+                  onClick={() => {
+                    history.back();
+                  }}
+                  variant="outline-danger">
+                  Back
+                </Button>
               </Nav.Item>
             </Nav>
           </Col>

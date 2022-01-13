@@ -114,8 +114,9 @@ a{
   overflow:auto;
 }
 
-.albums-title{
-  font-size: 16px;
+.album-title{
+  font-size: 18px;
+  text-align:center;
 }
 
 .photo-thumbnail{
