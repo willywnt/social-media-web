@@ -9,10 +9,9 @@ const DetailUser = () => {
   const [user, setUser] = useState({});
   const [albums, setAlbums] = useState([]);
   const [photos, setPhotos] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [modalShow, setModalShow] = useState(false);
   const [selectedImage, setSelectedImage] = useState({});
-  // datanya gabisa tampilin menggunakan sytax user.company.name ,dll.
+
   const [phone, setPhone] = useState();
   const [company, setCompany] = useState();
   const [street, setStreet] = useState();
@@ -27,7 +26,6 @@ const DetailUser = () => {
       .then((response) => {
         if (response.status === 200) {
           setPhotos(response.data);
-          setLoading(false);
         } else {
           console.log(response.data);
         }
@@ -195,7 +193,7 @@ const DetailUser = () => {
     );
   }
 
-  const ModalComments = (props) => {
+  const ModalZoomPhoto = (props) => {
     return (
       <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered size="lg">
         <Modal.Header closeButton>
@@ -234,7 +232,7 @@ const DetailUser = () => {
       {/* Show Profile & Albums */}
       {renderProfileAndAlbums()}
 
-      <ModalComments
+      <ModalZoomPhoto
         show={modalShow}
         onHide={() => {
           setModalShow(false);

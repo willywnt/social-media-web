@@ -22,13 +22,8 @@ export function getAllUser() {
     dispatch(getAllUserBegin());
 
     let apiUrl = 'https://jsonplaceholder.typicode.com/users';
-    return axios({
-      url: apiUrl,
-      method: 'GET',
-      headers: {
-        Accept: 'application/json'
-      }
-    })
+    return axios
+      .get(apiUrl)
       .then((response) => {
         if (response.status === 200) {
           dispatch(getAllUserSuccess(response.data));
@@ -64,13 +59,8 @@ export function getAllPost() {
     dispatch(getAllPostBegin());
 
     let apiUrl = 'https://jsonplaceholder.typicode.com/posts';
-    return axios({
-      url: apiUrl,
-      method: 'GET',
-      headers: {
-        Accept: 'application/json'
-      }
-    })
+    return axios
+      .get(apiUrl)
       .then((response) => {
         if (response.status === 200) {
           dispatch(getAllPostSuccess(response.data));
