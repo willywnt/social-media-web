@@ -1,38 +1,148 @@
-.App {
-  text-align: center;
+*{
+  box-sizing:border-box;
+  margin:0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a{
+  text-decoration:none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container{
+  width:614px;
+  margin:0 auto;
+}
+.container2{
+  width:800px;
+  height:100vh;
+  margin:0 auto;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.post-list{
+  margin: 10px 0;
+}
+.avatar-user{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+}
+.avatar-userx2{
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  margin-right: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-post{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+}
+
+.user-name{
+  font-size:16px;
+  margin:0px;
+  color:#335CAB;
+}
+.company-name{
+  font-size:12px;
+  margin:0px;
+  color:#7c7c7c;
+}
+.user-info{
+  margin-left:15px; 
+}
+.post-title,.post-text{
+  color:black;
+}
+
+.modal-body{
+  height: 70vh;
+  overflow:auto;
+}
+.modal-body-photo{
+  height: 70vh;
+  overflow:auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content:center;
+  align-items:center;
+}
+
+.loading{
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.comment:not(:last-child){
+  border-bottom: 0.5px solid #7c7c7c;
+}
+.author{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  margin:10px 0;
+}
+
+.author-name{
+  font-size:16px;
+  margin: 0 0 0 15px;
+  color:#335CAB;
+}
+.profile-avatar-name{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom:50px;
+}
+.profile-name{
+  font-size:24px;
+  margin:0;
 }
 
-.App-link {
-  color: #61dafb;
+.profile-username{
+  font-size:16px;
+  color:#7c7c7c;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.albums{
+  height: 460px;
+  margin:0 auto;
+  overflow:auto;
+}
+
+.albums-title{
+  font-size: 16px;
+}
+
+.photo-thumbnail{
+  width:100px;
+  height:100px;
+}
+.photo-full{
+  max-width:70%;
+  height:auto;
+  margin:0 auto;
+}
+
+.album-photo{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:center;
+  margin:20px 0;
+}
+.photo{
+  margin-right: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.content-center{
+  margin:0 auto;
+}
+.btn-zoom{
+  margin-top: 10px;
 }
